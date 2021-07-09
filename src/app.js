@@ -1,1 +1,5 @@
-console.log('this is executing from webpack compilation');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+console.log(typeof React);
+console.log(typeof ReactDOM);
