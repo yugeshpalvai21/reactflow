@@ -1,1 +1,3 @@
-console.log('this is executing from webpack compilation');
+const isAdult = require("./utils.js");
+
+console.log(isAdult(18));
