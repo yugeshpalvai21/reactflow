@@ -15,7 +15,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const isAdult = __webpack_require__(/*! ./utils.js */ \"./src/utils.js\");\n\nconsole.log(isAdult(18));\n\n//# sourceURL=webpack://reactflow/./src/app.js?");
+eval("const isAdult = __webpack_require__(/*! ./utils.js */ \"./src/utils.js\");\n\nconsole.log(isAdult(18));\n\n\n\n//# sourceURL=webpack://reactflow/./src/app.js?");
 
 /***/ }),
 
