@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app.js":
+/*!********************!*\
+  !*** ./src/app.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n\n // const React = require('react')\n\nconsole.log(_typeof(react__WEBPACK_IMPORTED_MODULE_0__));\nconsole.log(_typeof(react_dom__WEBPACK_IMPORTED_MODULE_1__));\nconsole.dir(react__WEBPACK_IMPORTED_MODULE_0__);\nvar domElement = document.getElementById(\"main\");\nvar baseElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"h3\", null, \"Hello World From Webpack\");\nreact_dom__WEBPACK_IMPORTED_MODULE_1__.render(baseElement, domElement); // const isAdult = require(\"./utils.js\");\n// import { isSenior } from './isSenior.js';\n// // const isSenior = require(\"./isSenior.js\");\n// console.log(isAdult(18));\n// console.log(isSenior(18));\n\n//# sourceURL=webpack://reactflow/./src/app.js?");
+
+/***/ }),
+
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
@@ -97,16 +107,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ \"./node_modules/scheduler/cjs/scheduler-tracing.development.js\");\n}\n\n\n//# sourceURL=webpack://reactflow/./node_modules/scheduler/tracing.js?");
-
-/***/ }),
-
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\n\n// const React = require('react')\nconsole.log(typeof react__WEBPACK_IMPORTED_MODULE_0__);\nconsole.log(typeof react_dom__WEBPACK_IMPORTED_MODULE_1__);\nconsole.dir(react__WEBPACK_IMPORTED_MODULE_0__)\n\n// const isAdult = require(\"./utils.js\");\n// import { isSenior } from './isSenior.js';\n// // const isSenior = require(\"./isSenior.js\");\n\n// console.log(isAdult(18));\n\n// console.log(isSenior(18));\n\n\n\n\n//# sourceURL=webpack://reactflow/./src/app.js?");
 
 /***/ })
 
