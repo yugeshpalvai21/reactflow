@@ -10,15 +10,32 @@ const Header = (props) => (
         <p>Manage Dails Updates</p>
     </div>
 )
+
+const Item = (props) => (
+    <li>{props.item.title}</li>
+)
+
+const Items = (props) => (
+    <div>
+        <ul>
+            { props.items.map((item) => <Item key={item.id} item={item} />)}
+        </ul>
+    </div>
+)
+
+
 class UnChecked extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            items: [{id: 123, title: 'ruby'}, {id: 345, title: 'react'}]
+        }
     }
     render() {
         return (
             <div>
                 <Header />
-                <div>ToDos Component</div>
+                <Items items={this.state.items}/>
                 <div>Form Component</div>
             </div>
         )
