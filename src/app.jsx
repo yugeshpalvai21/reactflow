@@ -23,6 +23,35 @@ const Items = (props) => (
     </div>
 )
 
+class ItemForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e)  {
+        e.preventDefault();
+        const inputElement = e.target.children[0];
+        if(inputElement.value.trim().length <= 2) {
+            alert('enter minimum length 3');
+        } else {
+            this.props.setItem(inputElement.value);
+            inputElement.value = "";
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" name="search_text" id="search_text" placeholder="Enter Item" />
+                    <input type="submit" value="Inject Item" />
+                </form>
+            </div>
+        )
+    }
+}
+
 
 class UnChecked extends React.Component {
     constructor(props) {
@@ -30,13 +59,23 @@ class UnChecked extends React.Component {
         this.state = {
             items: [{id: 123, title: 'ruby'}, {id: 345, title: 'react'}]
         }
+        this.setItem = this.setItem.bind(this);
     }
+
+    setItem(item) {
+        this.setState((prevState) => {
+            return {
+                items: [...prevState.items,{id: Math.random(), title: item}]
+            }
+        })
+    }
+    
     render() {
         return (
             <div>
                 <Header />
                 <Items items={this.state.items}/>
-                <div>Form Component</div>
+                <ItemForm setItem={this.setItem} />
             </div>
         )
     }
