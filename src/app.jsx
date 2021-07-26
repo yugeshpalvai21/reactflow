@@ -12,13 +12,16 @@ const Header = (props) => (
 )
 
 const Item = (props) => (
-    <li>{props.item.title}</li>
+    <li>
+        {props.item.title}
+        <button onClick={props.deleteItem(props.item.id)}>Remove This</button>
+    </li>
 )
 
 const Items = (props) => (
     <div>
         <ul>
-            { props.items.map((item) => <Item key={item.id} item={item} />)}
+            { props.items.map((item) => <Item key={item.id} item={item} deleteItem={props.deleteItem}/>)}
         </ul>
     </div>
 )
@@ -60,6 +63,7 @@ class UnChecked extends React.Component {
             items: [{id: 123, title: 'ruby'}, {id: 345, title: 'react'}]
         }
         this.setItem = this.setItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     setItem(item) {
@@ -69,13 +73,21 @@ class UnChecked extends React.Component {
             }
         })
     }
+
+    deleteItem(deleteItem) {
+        this.setState((prevState) => {
+            return  {
+                items: prevState.items.reduce((item) => item.id === deleteItem)
+            }
+        })
+    }
     
     render() {
         return (
             <div>
                 <Header />
-                <Items items={this.state.items}/>
-                <ItemForm setItem={this.setItem} />
+                <Items items={this.state.items} deleteItem={this.deleteItem}/>
+                <ItemForm setItem={this.setItem} deleteItem={this.deleteItem}/>
             </div>
         )
     }
