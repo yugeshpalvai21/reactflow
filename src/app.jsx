@@ -14,7 +14,7 @@ const Header = (props) => (
 const Item = (props) => (
     <li>
         {props.item.title}
-        <button onClick={props.deleteItem(props.item.id)}>Remove This</button>
+        <button onClick={()=>{props.deleteItem(props.item.id)}}>Remove This</button>
     </li>
 )
 
@@ -77,7 +77,7 @@ class UnChecked extends React.Component {
     deleteItem(deleteItem) {
         this.setState((prevState) => {
             return  {
-                items: prevState.items.reduce((item) => item.id === deleteItem)
+                items: prevState.items.filter((item) => (item.id != deleteItem))
             }
         })
     }
@@ -87,7 +87,7 @@ class UnChecked extends React.Component {
             <div>
                 <Header />
                 <Items items={this.state.items} deleteItem={this.deleteItem}/>
-                <ItemForm setItem={this.setItem} deleteItem={this.deleteItem}/>
+                <ItemForm setItem={this.setItem} />
             </div>
         )
     }
