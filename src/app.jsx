@@ -5,7 +5,7 @@ import './styles/main.scss';
 const domElement = document.getElementById('main');
 
 const Header = (props) => (
-    <div>
+    <div className="header">
         <h1>UnChecked App</h1>
         <p>Manage Dails Updates</p>
     </div>
@@ -84,7 +84,7 @@ class UnChecked extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="container">
                 <Header />
                 <Items items={this.state.items} deleteItem={this.deleteItem}/>
                 <ItemForm setItem={this.setItem} />

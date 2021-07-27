@@ -1,3 +1,18 @@
 @import "./base/base";
 
-@import "./couter_app_styling"
+.container {
+    width: 70vh;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.header {
+    border: 1px solid red;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: tomato;
+    h1 {
+        letter-spacing: 3px;
+    }
+}
