@@ -14,8 +14,10 @@ const Header = (props) => (
 const Item = (props) => (
     <li>
         <input type="checkbox" name="label" />
-        <p>{props.item.title}
-        <button onClick={()=>{props.deleteItem(props.item.id)}}>Remove This</button></p>
+        <p>
+            {props.item.title}
+            <a onClick={()=>{props.deleteItem(props.item.id)}}><i className="fas fa-trash"></i></a>
+        </p>
     </li>
 )
 
@@ -46,7 +48,7 @@ class ItemForm extends React.Component {
 
     render() {
         return (
-            <div class="form">
+            <div className="form">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="search_text" id="search_text" placeholder="Enter Item" />
                     <input type="submit" value="Inject Item" />
