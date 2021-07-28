@@ -46,7 +46,7 @@ class ItemForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div class="form">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="search_text" id="search_text" placeholder="Enter Item" />
                     <input type="submit" value="Inject Item" />
