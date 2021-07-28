@@ -13,13 +13,14 @@ const Header = (props) => (
 
 const Item = (props) => (
     <li>
-        {props.item.title}
-        <button onClick={()=>{props.deleteItem(props.item.id)}}>Remove This</button>
+        <input type="checkbox" name="label" />
+        <p>{props.item.title}
+        <button onClick={()=>{props.deleteItem(props.item.id)}}>Remove This</button></p>
     </li>
 )
 
 const Items = (props) => (
-    <div>
+    <div className="items">
         <ul>
             { props.items.map((item) => <Item key={item.id} item={item} deleteItem={props.deleteItem}/>)}
         </ul>
