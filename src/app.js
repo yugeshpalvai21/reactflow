@@ -1,1 +1,3 @@
-console.log('Webpack Configured Properly');
+import { isValid } from './utils.js';
+
+console.log(isValid());
