@@ -1,0 +1,12 @@
+{
+  "name": "reactflow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yugeshpalvai21/reactflow.git",
+  "author": "yugeshpalvai <yugeshpalvai21@gmail.com>",
+  "license": "MIT",
+  "scripts": { "server": "live-server public"},
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
