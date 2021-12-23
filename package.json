@@ -5,8 +5,15 @@
   "repository": "git@github.com:yugeshpalvai21/reactflow.git",
   "author": "yugeshpalvai <yugeshpalvai21@gmail.com>",
   "license": "MIT",
-  "scripts": { "server": "live-server public"},
+  "scripts": {
+    "server": "live-server public",
+    "build": "webpack"
+  },
   "dependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "webpack": "^5.65.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
   }
 }
