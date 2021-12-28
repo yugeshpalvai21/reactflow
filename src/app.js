@@ -1,3 +1,6 @@
-import { isValid } from './utils.js';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
-console.log(isValid());
+const firstElement = React.createElement('p', {}, 'This is from React Component');
+
+ReactDOM.render(firstElement, document.getElementById('main'));

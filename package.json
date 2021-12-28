@@ -7,10 +7,12 @@
   "license": "MIT",
   "scripts": {
     "server": "live-server public",
-    "build": "webpack"
+    "build": "webpack --watch"
   },
   "dependencies": {
     "live-server": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "webpack": "^5.65.0"
   },
   "devDependencies": {
