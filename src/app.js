@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-const firstElement = React.createElement('p', {}, 'This is from React Component');
+const firstElement = (
+  <p> This Is renders Using JSX</p>
+)
 
 ReactDOM.render(firstElement, document.getElementById('main'));
